@@ -4,10 +4,17 @@
   "newProjectRoot": "projects",
   "projects": {
     "my-portfolio": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "es": "src/locale/messages.es.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
         }
       },
       "root": "",
@@ -21,21 +28,20 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+               "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/styles.scss",
-                "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-                "node_modules/primeng/resources/primeng.min.css",
-                "node_modules/primeicons/primeicons.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -60,6 +66,10 @@
               ],
               "outputHashing": "all"
             },
+            "es": {
+    "localize": ["es"],
+    "outputPath": "dist/my-portfolio/es"
+  },
             "development": {
               "optimization": false,
               "extractLicenses": false,
@@ -88,7 +98,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",

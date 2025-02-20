@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@use "./app/styles/mixin.scss";
+@import "primeicons/primeicons.css";
+
+:root{
+    li{
+        list-style-type: none;
+        cursor: pointer;
+      }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color)
+  }

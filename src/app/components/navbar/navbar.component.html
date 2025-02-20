@@ -1,0 +1,38 @@
+<header>
+    <div class="navbar">
+      <div class="logo">
+        <a routerLink="/">{{ 'navbar.title' | translate }}</a>
+        <button class="lang-toggle" (click)="toggleLanguage()">
+          {{ language === 'en' ? 'ENG' : 'ESP' }}
+        </button>
+      </div>
+
+
+      <!-- Desktop Menu -->
+      <nav class="desktop-menu">
+        <ul>
+          <li><a routerLink="/">{{ 'navbar.home' | translate }}</a></li>
+          <li><a routerLink="/about">{{ 'navbar.about' | translate }}</a></li>
+          <li><a routerLink="/work">{{ 'navbar.work' | translate }}</a></li>
+          <li><a routerLink="/contact">{{ 'navbar.contact' | translate }}</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile Menu Button -->
+      <div class="mobile-menu">
+        <button (click)="sidebarVisible = true" aria-label="Open Menu">
+          <i class="pi pi-bars" style="font-size: 1.5rem;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Sidebar for Mobile Navigation -->
+  <p-sidebar [(visible)]="sidebarVisible" position="full" >
+    <ul class="mobile-nav">
+      <li><a routerLink="/" (click)="sidebarVisible = false">{{ 'navbar.home' | translate }}</a></li>
+      <li><a routerLink="/about" (click)="sidebarVisible = false">{{ 'navbar.about' | translate }}</a></li>
+      <li><a routerLink="/work" (click)="sidebarVisible = false">{{ 'navbar.work' | translate }}</a></li>
+      <li><a routerLink="/contact" (click)="sidebarVisible = false">{{ 'navbar.contact' | translate }}</a></li>
+    </ul>
+  </p-sidebar>
+  

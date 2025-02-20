@@ -1,0 +1,38 @@
+@use "../styles/mixin.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  html {
+    overflow-x: hidden;
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  iframe,
+  embed {
+    max-width: 100%;
+  }
+
+  .blurred {
+    filter: blur(8px);
+    pointer-events: none; 
+    opacity: 0.7;
+  }
+
+  
