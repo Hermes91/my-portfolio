@@ -1,0 +1,235 @@
+.image-container {
+  position: relative;
+  display: block;
+  margin-top: 5em;
+  text-align: center;
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    font-style: italic;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .home {
+    &-text {
+      left: clamp(66%, 10vw, 50%);
+      top: 35%;
+      gap: 1em;
+      transform: translate(-200%, -50%);
+
+      position: absolute;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100pt;
+    }
+
+    &-title {
+      font-size: clamp(45pt, 15vw, 130pt);
+
+      color: var(--primary-color);
+      font-family: "Oleo Script", cursive;
+      font-weight: 700;
+      line-height: 0.8;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &-subtitle {
+      font-size: clamp(1.8em, 1vw, 21pt);
+
+      color: var(--black);
+      font-family: "Outfit", serif;
+      font-weight: 400;
+    }
+
+    &-services {
+      display: flex;
+      flex-direction: column;
+
+      align-items: flex-start;
+      color: var(--black);
+
+      .bar {
+        font-size: 1.5em;
+
+        padding: 0.2em;
+        position: relative;
+        width: 30%;
+        display: flex;
+        width: fit-content;
+        font-weight: 200;
+        font-family: "Outfit";
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////
+
+@media (min-width: 1900px) {
+  .home-text {
+    transform: translate(-180%, -50%) !important;
+    left: clamp(64%, 10vw, 50%) !important;
+  }
+}
+
+@media (min-width: 2100px) {
+  .home-text {
+    transform: translate(-180%, -50%) !important;
+    left: clamp(57%, 10vw, 50%) !important;
+  }
+}
+@media (max-width: 1900px) {
+  .home-text {
+    transform: translate(-180%, -50%) !important;
+    left: clamp(64%, 10vw, 50%) !important;
+  }
+}
+
+@media (max-width: 1600px) {
+  .home-text {
+    left: clamp(68%, 10vw, 50%) !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .home-text {
+    left: clamp(70%, 10vw, 50%) !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .home {
+    &-text {
+      left: clamp(69%, 10vw, 50%) !important;
+    }
+    &-subtitle {
+      font-size: clamp(1.4em, 1vw, 21pt) !important;
+    }
+    &-services {
+      .bar {
+        font-size: 1.3em !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .home {
+    &-text {
+      left: clamp(69%, 10vw, 50%) !important;
+      top: 38% !important;
+    }
+    &-subtitle {
+      font-size: clamp(1.3em, 1vw, 21pt) !important;
+    }
+    &-services {
+      .bar {
+        font-size: clamp(16pt, 1vw, 12pt) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .home {
+    &-text {
+      top: 43% !important;
+      gap: 0.5em !important;
+      left: 70% !important;
+    }
+    &-subtitle {
+      font-size: clamp(0.8em, 1vw, 12pt) !important;
+      width: 100% !important;
+    }
+    &-services {
+      position: relative !important;
+      .bar {
+        left: 1% !important;
+        font-size: clamp(12pt, 1vw, 12pt) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+    .home {
+        &-text {
+            left: clamp(78%, 10vw, 50%) !important;
+            top: 50% !important;
+        }
+        &-subtitle {
+          width: fit-content !important;
+          font-size: clamp(0.8em, 1vw, 12pt) !important;
+        }
+        &-services {
+            flex-direction: row !important;
+            width: 165% !important;
+            margin-top: 3.5em !important;
+    
+          .bar {
+            left: 10% !important;
+          }
+        }
+      }
+}
+
+@media (max-width: 400px) {
+  .home {
+    &-text {
+      left: clamp(75%, 10vw, 50%) !important;
+      top: 55% !important;
+      gap: 0.7em !important;
+    }
+    &-title {
+      font-size: 40pt !important;
+    }
+    &-subtitle {
+      width: fit-content !important;
+      font-size: clamp(0.7em, 1vw, 12pt) !important;
+    }
+    &-services {
+      margin-top: 2.5em !important;
+      flex-direction: row !important;
+
+      .bar {
+        width: fit-content!important;
+        left: 10% !important;
+        font-size: clamp(10pt, 1vw, 12pt) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .home {
+    &-text {
+      left: clamp(80%, 10vw, 50%) !important;
+      top: 60% !important;
+    }
+    &-title {
+      font-size: 40pt !important;
+    }
+    &-subtitle {
+      font-size: clamp(0.7em, 1vw, 12pt) !important;
+      width: fit-content !important;
+    }
+    &-services {
+      margin-top: 1.2em !important;
+
+      .bar {
+        font-size: clamp(10pt, 1vw, 12pt) !important;
+        width: fit-content !important;
+        left: 15% !important;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SidebarModule } from 'primeng/sidebar';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,14 +13,13 @@ export class NavbarComponent {
   sidebarVisible: boolean = false;
   language: 'en' | 'spa' = 'en'; 
 
-  constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+  constructor(private languageService: LanguageService) {
+    this.language = this.languageService.getLanguage();
   }
 
   toggleLanguage(): void {
-    this.language = this.language === 'en' ? 'spa' : 'en';
-    this.translate.use(this.language)
+    this.languageService.toggleLanguage();
+    this.language = this.languageService.getLanguage(); 
   }
 
   @HostListener('window:resize', ['$event'])

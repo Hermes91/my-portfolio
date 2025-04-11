@@ -1,0 +1,30 @@
+:host {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .pencil {
+    position: absolute;
+    opacity: 0.5;
+    color: var(--backgroundFloat);
+    animation: float linear infinite;
+    will-change: transform;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-120vh) translateX(-30vw) rotate(360deg);
+    }
+  }
+
+
+  @media (max-width: 375px) {
+   
+}

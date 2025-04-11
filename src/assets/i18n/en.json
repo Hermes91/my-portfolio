@@ -1,7 +1,21 @@
 {
-    "navbar.title": "My Portfolio",
-    "navbar.home": "Home",
-    "navbar.about": "About Me",
-    "navbar.work": "Work",
-    "navbar.contact": "Contact"
+    "NAVBAR":{
+      "TITLE": "My Portfolio",
+      "HOME": "Home",
+      "ABOUT": "About Me",
+      "WORK": "Work",
+      "CONTACT": "Contact"
+    },
+
+    "HOME": {
+      "TITLE": "Hello",
+      "SUBTITLE": "Welcome! Take a look around.",
+      "GD":"graphic designer",
+      "ILLUSTRATOR":"illustrator"
+    },
+
+    "ABOUT": {
+      "TITLE": "About Me",
+      "DESCRIPTION": "I'm Hermes, a graphic designer from Mendoza, Argentina, aspiring to become an illustration artist. I take a hands-on, adaptable approach to new projects, learning as I go to meet each challenge. Responsible and versatile, I work well both independently and as part of a team."
+    }
   }

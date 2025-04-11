@@ -1,0 +1,27 @@
+<div class="image-container">
+    <div class="home-text">
+        <div class="home-title">{{ 'HOME.TITLE' | translate }}</div>
+        <div class="home-subtitle">{{ 'HOME.SUBTITLE' | translate }}</div>
+        <div class="home-services">
+            <div class="bar">▷ {{ 'HOME.GD' | translate }}</div>  
+            <div class="bar">▷ {{ 'HOME.ILLUSTRATOR' | translate }}</div>  
+        </div>
+    </div>
+    
+@if(isLoading){
+    <img src="../../../assets/cartridgetextless-LowRes.gif" 
+    alt="Loading..."
+    class="loading-gif"
+ width="1090px" height="720px" >
+}   
+ 
+<img 
+ [src]="imageSrc" 
+ alt="cartucho"
+ [class.hidden]="isLoading"
+ (load)="onImageLoad()"
+ (error)="onImageError()"
+>
+</div>
+<app-about></app-about>
+<app-work></app-work>

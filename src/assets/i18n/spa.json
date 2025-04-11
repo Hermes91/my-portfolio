@@ -1,7 +1,21 @@
 {
-    "navbar.title": "Mi Portafolio",
-    "navbar.home": "Inicio",
-    "navbar.about": "Sobre Mí",
-    "navbar.work": "Trabajo",
-    "navbar.contact": "Contacto"
+    "NAVBAR":{
+      "TITLE": "Mi Portafolio",
+      "HOME": "Inicio",
+      "ABOUT": "Sobre Mí",
+      "WORK": "Trabajo",
+      "CONTACT": "Contacto"
+    },
+
+    "HOME": {
+      "TITLE": "Hola",
+      "SUBTITLE": "¡Bienvenido! Echa un vistazo.",
+      "GD":"diseñador grafico",
+      "ILLUSTRATOR":"ilustrador"
+    },
+
+    "ABOUT": {
+      "TITLE": "Sobre Mí",
+      "DESCRIPTION": "Soy Hermes, diseñador gráfico de Mendoza, Argentina, con la aspiración de convertirme en ilustrador. Abordo nuevos proyectos de manera práctica y adaptable, aprendiendo sobre la marcha para enfrentar cada desafío. Responsable y versátil, me desenvuelvo bien tanto de forma independiente como en equipo."
+    }
   }

@@ -1,7 +1,7 @@
 <header>
     <div class="navbar">
       <div class="logo">
-        <a routerLink="/">{{ 'navbar.title' | translate }}</a>
+        <a routerLink="/">{{ 'NAVBAR.TITLE' | translate }}</a>
         <button class="lang-toggle" (click)="toggleLanguage()">
           {{ language === 'en' ? 'ENG' : 'ESP' }}
         </button>
@@ -11,10 +11,10 @@
       <!-- Desktop Menu -->
       <nav class="desktop-menu">
         <ul>
-          <li><a routerLink="/">{{ 'navbar.home' | translate }}</a></li>
-          <li><a routerLink="/about">{{ 'navbar.about' | translate }}</a></li>
-          <li><a routerLink="/work">{{ 'navbar.work' | translate }}</a></li>
-          <li><a routerLink="/contact">{{ 'navbar.contact' | translate }}</a></li>
+          <li><a routerLink="/">{{ 'NAVBAR.HOME' | translate }}</a></li>
+          <li><a routerLink="/about">{{ 'NAVBAR.ABOUT' | translate }}</a></li>
+          <li><a routerLink="/work">{{ 'NAVBAR.WORK' | translate }}</a></li>
+          <li><a routerLink="/contact">{{ 'NAVBAR.CONTACT' | translate }}</a></li>
         </ul>
       </nav>
       <!-- Mobile Menu Button -->
@@ -29,10 +29,10 @@
   <!-- Sidebar for Mobile Navigation -->
   <p-sidebar [(visible)]="sidebarVisible" position="full" >
     <ul class="mobile-nav">
-      <li><a routerLink="/" (click)="sidebarVisible = false">{{ 'navbar.home' | translate }}</a></li>
-      <li><a routerLink="/about" (click)="sidebarVisible = false">{{ 'navbar.about' | translate }}</a></li>
-      <li><a routerLink="/work" (click)="sidebarVisible = false">{{ 'navbar.work' | translate }}</a></li>
-      <li><a routerLink="/contact" (click)="sidebarVisible = false">{{ 'navbar.contact' | translate }}</a></li>
+      <li><a routerLink="/" (click)="sidebarVisible = false">{{ 'NAVBAR.HOME' | translate }}</a></li>
+      <li><a routerLink="/about" (click)="sidebarVisible = false">{{ 'NAVBAR.ABOUT' | translate }}</a></li>
+      <li><a routerLink="/work" (click)="sidebarVisible = false">{{ 'NAVBAR.WORK' | translate }}</a></li>
+      <li><a routerLink="/contact" (click)="sidebarVisible = false">{{ 'NAVBAR.CONTACT' | translate }}</a></li>
     </ul>
   </p-sidebar>
   

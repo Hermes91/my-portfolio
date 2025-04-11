@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @use "./app/styles/mixin.scss";
 @import "primeicons/primeicons.css";
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
 
 :root{
     li{
@@ -11,5 +13,22 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color)
+    margin: 0;
   }
+  
+  .background {
+    background-color: var(--background-color);
+    position: sticky;
+    height: 100%;
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 36pt;
+   }
+
+   p {
+    font-size: 14pt;
+    line-height: 28pt;
+    margin: 0 auto;
+}
