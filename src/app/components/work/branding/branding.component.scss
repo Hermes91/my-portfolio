@@ -1,0 +1,18 @@
+.brand {
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  &-image img {
+    width: 100%;
+    max-width: 80em;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+}

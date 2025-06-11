@@ -17,5 +17,14 @@
     "ABOUT": {
       "TITLE": "About Me",
       "DESCRIPTION": "I'm Hermes, a graphic designer from Mendoza, Argentina, aspiring to become an illustration artist. I take a hands-on, adaptable approach to new projects, learning as I go to meet each challenge. Responsible and versatile, I work well both independently and as part of a team."
+    },
+
+    "WORK":{
+      "TITLE":"Work"
+    },
+
+    "CONTACT":{
+      "CONTACT":"Contact Me",
+      "THANKS":"Thanks for visiting"
     }
   }

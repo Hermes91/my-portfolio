@@ -1,0 +1,15 @@
+<section class="brand-content">
+  <div
+    class="brand-image"
+    *ngFor="
+      let image of [
+        '../../../../assets/brand/1.webp',
+        '../../../../assets/brand/2.webp',
+        '../../../../assets/brand/3.webp',
+        '../../../../assets/brand/4.webp'
+      ]
+    "
+  >
+    <img [src]="'../../../../assets/brand/' + image" alt="brand image" />
+  </div>
+</section>

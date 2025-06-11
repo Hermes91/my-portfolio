@@ -4,7 +4,6 @@
     height: 100vh;
     pointer-events: none;
     z-index: -1;
-    overflow: hidden;
   }
   
   .pencil {
@@ -23,8 +22,3 @@
       transform: translateY(-120vh) translateX(-30vw) rotate(360deg);
     }
   }
-
-
-  @media (max-width: 375px) {
-   
-}

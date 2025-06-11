@@ -11,13 +11,14 @@
       <!-- Desktop Menu -->
       <nav class="desktop-menu">
         <ul>
-          <li><a routerLink="/">{{ 'NAVBAR.HOME' | translate }}</a></li>
-          <li><a routerLink="/about">{{ 'NAVBAR.ABOUT' | translate }}</a></li>
-          <li><a routerLink="/work">{{ 'NAVBAR.WORK' | translate }}</a></li>
-          <li><a routerLink="/contact">{{ 'NAVBAR.CONTACT' | translate }}</a></li>
+          <li><a routerLink="home">{{ 'NAVBAR.HOME' | translate }}</a></li>
+          <li><a routerLink="/home" fragment="about">{{ 'NAVBAR.ABOUT' | translate }}</a></li>
+          <li><a routerLink="/home" fragment="work">{{ 'NAVBAR.WORK' | translate }}</a></li>
+          <li><a routerLink="/home" fragment="contact">{{ 'NAVBAR.CONTACT' | translate }}</a></li>
         </ul>
       </nav>
-      <!-- Mobile Menu Button -->
+     
+    <!-- Mobile Menu Button -->
       <div class="mobile-menu">
         <button (click)="sidebarVisible = true" aria-label="Open Menu">
           <i class="pi pi-bars" style="font-size: 1.5rem;"></i>
@@ -26,6 +27,8 @@
     </div>
   </header>
   
+  <!-- TO DO -->
+  <!-- fix sidebar Mobile Navigation -->
   <!-- Sidebar for Mobile Navigation -->
   <p-sidebar [(visible)]="sidebarVisible" position="full" >
     <ul class="mobile-nav">

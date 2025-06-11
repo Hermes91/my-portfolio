@@ -1,11 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SidebarModule } from 'primeng/sidebar';
-import { LanguageService } from '../../services/language.service';
+import { LanguageService } from '../../../services/language.service';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [SidebarModule, TranslateModule],
+  imports: [SidebarModule, TranslateModule,RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })

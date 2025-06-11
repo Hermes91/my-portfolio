@@ -1,5 +1,62 @@
-<div class="background">
-<div>
-    <p>work works!</p>
-</div>
-</div>
+<section class="work-section" id="work">
+  <div class="work-content">
+    <div>
+      <div class="work-title">
+        <span>▶</span>
+        <h1>{{ "WORK.TITLE" | translate }}</h1>
+      </div>
+    </div>
+
+    <nav class="work-nav">
+      <div class="image-wrapper">
+        <a routerLink="/work/logos" routerLinkActive="active">
+          <img
+            [src]="
+              isLoading
+                ? '../../../assets/packageFinal3low.gif'
+                : '../../../assets/packageFinal3.png'
+            "
+            loading="lazy"
+            (load)="onImageLoad()"
+            (error)="onImageError()"
+            alt="Logos"
+          />
+        </a>
+      </div>
+
+      
+      <div class="image-wrapper">
+        <a routerLink="/work/illustrations" routerLinkActive="active">
+          <img
+            [src]="
+              isLoading
+                ? '../../../assets/packageFinal1low.gif'
+                : '../../../assets/packageFinal1.png'
+            "
+            loading="lazy"
+            (load)="onImageLoad()"
+            (error)="onImageError()"
+            alt="Illustrations"
+          />
+        </a>
+      </div>
+
+
+      <div class="image-wrapper">
+        <a routerLink="/work/branding" routerLinkActive="active">
+          <img
+            [src]="
+              isLoading
+                ? '../../../assets/packageFinal2low.gif'
+                : '../../../assets/packageFinal2.png'
+            "
+            loading="lazy"
+            (load)="onImageLoad()"
+            (error)="onImageError()"
+            alt="Branding"
+          />
+        </a>
+      </div>
+    </nav>
+  </div>
+</section>
