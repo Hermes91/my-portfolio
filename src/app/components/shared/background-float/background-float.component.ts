@@ -46,30 +46,3 @@ const iconGenerator = setInterval(() => {
     }, interval);
   }
 }
-
-
-
-
-
-
-
-//     const count = 10;
-
-//     for (let i = 0; i < count; i++) {
-//       const img = this.renderer.createElement('img');
-//       const randomIcon =
-//         this.icons[Math.floor(Math.random() * this.icons.length)];
-
-//       this.renderer.setAttribute(img, 'src', randomIcon);
-//       this.renderer.addClass(img, 'float-icon');
-
-//       img.style.left = `${Math.random() * 130}vw`;
-//       img.style.bottom = `-${Math.random() * 20}vh`;
-//       img.style.width = `${50 + Math.random() * 30}px`;
-//       img.style.height = 'auto';
-//       img.style.animationDuration = `${20 + Math.random() * 5}s`;
-
-//       this.renderer.appendChild(this.el.nativeElement, img);
-//     }
-//   }
-// }

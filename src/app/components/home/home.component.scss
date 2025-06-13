@@ -75,19 +75,20 @@
 
 ////////////////////////////////////////////
 
-@media (min-width: 1900px) {
+@media (max-width: 2600px) {
   .home-text {
-    transform: translate(-180%, -50%) !important;
-    left: clamp(64%, 10vw, 50%) !important;
+    transform: translate(-220%, -25%) !important;
+    left: clamp(66%, 10vw, 20%) !important;
   }
 }
 
-@media (min-width: 2100px) {
+@media (max-width: 2100px) {
   .home-text {
-    transform: translate(-180%, -50%) !important;
-    left: clamp(57%, 10vw, 50%) !important;
+    transform: translate(-190%, -25%) !important;
+    left: clamp(66%, 10vw, 20%) !important;
   }
 }
+
 @media (max-width: 1900px) {
   .home-text {
     transform: translate(-180%, -50%) !important;
