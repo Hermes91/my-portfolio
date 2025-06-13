@@ -5,10 +5,8 @@ import {
 } from '@angular/core';
 import {
   provideRouter,
-  withComponentInputBinding,
   withEnabledBlockingInitialNavigation,
   withInMemoryScrolling,
-  withRouterConfig,
 } from '@angular/router';
 
 import { routes } from './app.routes';

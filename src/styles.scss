@@ -1,37 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 @use "./app/styles/mixin.scss";
 @import "primeicons/primeicons.css";
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
 
-
-:root{
-    li{
-        list-style-type: none;
-        cursor: pointer;
-      }
-    
+:root {
+  transition: all 0.4s ease;
+  li {
+    list-style-type: none;
+    cursor: pointer;
+  }
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-  }
-  
-  .background {
-    background-color: var(--background-color);
-    position: sticky;
-    height: 100%;
-    z-index: -1;
-  }
+  transition: background-color 0.4s ease, color 0.4s ease;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
 
-  h1 {
-    font-size: 36pt;
-   }
+.background {
+  background-color: var(--background-color);
+  position: sticky;
+  height: 100%;
+  z-index: -1;
+}
 
-   p {
-    font-size: 14pt;
-    line-height: 28pt;
-    margin: 0 auto;
+h1 {
+  font-size: 36pt;
+}
+
+p {
+  font-size: 14pt;
+  line-height: 28pt;
+  margin: 0 auto;
 }

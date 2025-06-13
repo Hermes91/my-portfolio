@@ -13,7 +13,7 @@ export class LogosComponent {
     '../../../assets/logos/logo8.webp',
     '../../../assets/logos/logo2.webp',
     '../../../assets/logos/logo6.webp',
-    '../../../assets/logos/logo3.webp',
+    null,
     '../../../assets/logos/logo5.webp',
     '../../../assets/logos/logo4.webp',
     '../../../assets/logos/logo7.webp',

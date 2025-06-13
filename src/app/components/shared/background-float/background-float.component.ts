@@ -4,31 +4,38 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
   selector: 'app-background-float',
   imports: [],
   template: '',
-  styleUrl: './background-float.component.scss'
+  styleUrl: './background-float.component.scss',
 })
-export class BackgroundFloatComponent implements OnInit{
+export class BackgroundFloatComponent implements OnInit {
   constructor(private renderer: Renderer2, private el: ElementRef) {}
-  
-   icons = ['pi-pencil', 'pi-brush', 'pi-lightbulb', 'pi-eye', 'pi-palette', 'pi-send']; 
-  
+
+  icons = [
+    'assets/icons/iconArt.svg',
+    'assets/icons/iconCoffee.svg',
+    'assets/icons/iconComic.svg',
+    'assets/icons/iconEye.svg',
+    'assets/icons/iconIdea.svg',
+    'assets/icons/iconMouse.svg',
+    'assets/icons/iconUfo.svg',
+  ];
 
   ngOnInit(): void {
-    const count = 30;
+    const count = 10;
     for (let i = 0; i < count; i++) {
-      const icon = this.renderer.createElement('i');
-      const randomIcon = this.icons[Math.floor(Math.random() * this.icons.length)];
+      const img = this.renderer.createElement('img');
+      const randomIcon =
+        this.icons[Math.floor(Math.random() * this.icons.length)];
 
+      this.renderer.setAttribute(img, 'src', randomIcon);
+      this.renderer.addClass(img, 'float-icon');
 
-      this.renderer.addClass(icon, 'pi');
-      this.renderer.addClass(icon, randomIcon);
-      this.renderer.addClass(icon, 'pencil');
-      
-      icon.style.left = `${Math.random() * 100}vw`;
-      icon.style.bottom = `-${Math.random() * 30}vh`;
-      icon.style.fontSize = `${1 + Math.random() * 0.9}rem`;
-      icon.style.animationDuration = `${10 + Math.random() * 5}s`;
-      this.renderer.appendChild(this.el.nativeElement, icon);
+      img.style.left = `${Math.random() * 130}vw`;
+      img.style.bottom = `-${Math.random() * 20}vh`;
+      img.style.width = `${50 + Math.random() * 30}px`;
+      img.style.height = 'auto';
+      img.style.animationDuration = `${20 + Math.random() * 5}s`;
+
+      this.renderer.appendChild(this.el.nativeElement, img);
     }
   }
-
 }

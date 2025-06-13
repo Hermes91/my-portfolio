@@ -1,24 +1,25 @@
 :host {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: -1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.float-icon {
+  position: absolute;
+  opacity: 0.3;
+  animation: float linear infinite;
+  will-change: transform;
+  filter: invert(37%) sepia(94%) saturate(444%) hue-rotate(180deg)
+    brightness(93%) contrast(95%);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
   }
-  
-  .pencil {
-    position: absolute;
-    opacity: 0.5;
-    color: var(--backgroundFloat);
-    animation: float linear infinite;
-    will-change: transform;
+  100% {
+    transform: translateY(-210vh) translateX(-80vw) rotate(360deg);
   }
-  
-  @keyframes float {
-    0% {
-      transform: translateY(0) translateX(0) rotate(0deg);
-    }
-    100% {
-      transform: translateY(-120vh) translateX(-30vw) rotate(360deg);
-    }
-  }
+}

@@ -1,95 +1,113 @@
 @use "../../../styles/mixin.scss";
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  
-    .logo a {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: var(--text-color);
-      text-decoration: none;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--navbar-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
   }
-  
-  .desktop-menu {
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      margin: 0;
-      padding: 0;
-  
-      li a {
-        text-decoration: none;
-        color: var(--text-color);
-        font-weight: 500;
-        transition: color 0.3s;
-        &:hover {
-          color: var(--primary-color);
-        }
+}
+
+.desktop-menu {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+
+    li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: color 0.3s;
+      &:hover {
+        color: var(--primary-color);
       }
     }
   }
-  
-  .mobile-menu {
-    display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-nav {
+  text-decoration: none;
+}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+::ng-deep {
+  .p-drawer {
+    background-color: var(--background-color);
+
+    &-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  .mobile-nav {
+    padding: 2em;
+    font-size: 16pt;
   }
 
-  .mobile-nav{
-   text-decoration: none;  
-  }
+  .mobile-nav li {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
 
-  .lang-toggle {
-    background: none;
-    border: none;
-    color: var(--text-color);
-    font-weight: 500;
-    cursor: pointer;
-    transition: color 0.3s;
-  
     &:hover {
       color: var(--primary-color);
     }
   }
+}
 
-  ::ng-deep{
-    .p-drawer {
-        background-color: var(--background-color);
-   
-    &-content{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-      }
-      .mobile-nav{
-        padding: 2em;
-        font-size: 16pt;
-      }
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.3s;
 
-      .mobile-nav li{
-        padding: 1em;
-        display: flex;
-        justify-content: center;
-        
-        &:hover{
-          color: var(--primary-color);
-        }
-      }
+  &:hover {
+    color: var(--primary-color);
   }
 
-
-  ////////////////////
-  @media (max-width: mixin.$smallScreen) {
-    .desktop-menu {
-      display: none;
-    }
-    .mobile-menu {
-      display: block;
-    }
+  i {
+    position: relative;
+    bottom: 4px;
+    vertical-align: middle;
   }
+}
+
+////////////////////
+@media (max-width: mixin.$smallScreen) {
+  .desktop-menu {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}

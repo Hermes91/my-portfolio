@@ -1,41 +1,79 @@
 <header>
-    <div class="navbar">
-      <div class="logo">
-        <a routerLink="/">{{ 'NAVBAR.TITLE' | translate }}</a>
-        <button class="lang-toggle" (click)="toggleLanguage()">
-          {{ language === 'en' ? 'ENG' : 'ESP' }}
-        </button>
-      </div>
-
-
-      <!-- Desktop Menu -->
-      <nav class="desktop-menu">
-        <ul>
-          <li><a routerLink="home">{{ 'NAVBAR.HOME' | translate }}</a></li>
-          <li><a routerLink="/home" fragment="about">{{ 'NAVBAR.ABOUT' | translate }}</a></li>
-          <li><a routerLink="/home" fragment="work">{{ 'NAVBAR.WORK' | translate }}</a></li>
-          <li><a routerLink="/home" fragment="contact">{{ 'NAVBAR.CONTACT' | translate }}</a></li>
-        </ul>
-      </nav>
-     
-    <!-- Mobile Menu Button -->
-      <div class="mobile-menu">
-        <button (click)="sidebarVisible = true" aria-label="Open Menu">
-          <i class="pi pi-bars" style="font-size: 1.5rem;"></i>
-        </button>
-      </div>
+  <div class="navbar">
+    <div class="logo">
+      <a routerLink="/">{{ "NAVBAR.TITLE" | translate }}</a>
+      <button class="lang-toggle" (click)="toggleLanguage()">
+        {{ language === "en" ? "ENG" : "ESP" }}
+      </button>
     </div>
-  </header>
-  
-  <!-- TO DO -->
-  <!-- fix sidebar Mobile Navigation -->
-  <!-- Sidebar for Mobile Navigation -->
-  <p-sidebar [(visible)]="sidebarVisible" position="full" >
-    <ul class="mobile-nav">
-      <li><a routerLink="/" (click)="sidebarVisible = false">{{ 'NAVBAR.HOME' | translate }}</a></li>
-      <li><a routerLink="/about" (click)="sidebarVisible = false">{{ 'NAVBAR.ABOUT' | translate }}</a></li>
-      <li><a routerLink="/work" (click)="sidebarVisible = false">{{ 'NAVBAR.WORK' | translate }}</a></li>
-      <li><a routerLink="/contact" (click)="sidebarVisible = false">{{ 'NAVBAR.CONTACT' | translate }}</a></li>
-    </ul>
-  </p-sidebar>
-  
+
+    <!-- Desktop Menu -->
+    <nav class="desktop-menu">
+      <ul>
+        <li>
+          <a routerLink="home">{{ "NAVBAR.HOME" | translate }}</a>
+        </li>
+        <li>
+          <a routerLink="/home" fragment="about">{{
+            "NAVBAR.ABOUT" | translate
+          }}</a>
+        </li>
+        <li>
+          <a routerLink="/home" fragment="work">{{
+            "NAVBAR.WORK" | translate
+          }}</a>
+        </li>
+        <li>
+          <a routerLink="/home" fragment="contact">{{
+            "NAVBAR.CONTACT" | translate
+          }}</a>
+        </li>
+
+        <li>
+          <button
+            class="theme-toggle"
+            (click)="toggleDarkMode()"
+            [attr.aria-label]="
+              isDarkMode ? 'Switch to light theme' : 'Switch to dark theme'
+            "
+          >
+            <i class="pi" [ngClass]="isDarkMode ? 'pi-sun' : 'pi-moon'"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <div class="mobile-menu">
+      <button (click)="sidebarVisible = true" aria-label="Open Menu">
+        <i class="pi pi-bars" style="font-size: 1.5rem"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Sidebar for Mobile Navigation -->
+<p-sidebar [(visible)]="sidebarVisible" position="full">
+  <ul class="mobile-nav">
+    <li>
+      <a routerLink="/" (click)="sidebarVisible = false">{{
+        "NAVBAR.HOME" | translate
+      }}</a>
+    </li>
+    <li>
+      <a routerLink="/about" (click)="sidebarVisible = false">{{
+        "NAVBAR.ABOUT" | translate
+      }}</a>
+    </li>
+    <li>
+      <a routerLink="/work" (click)="sidebarVisible = false">{{
+        "NAVBAR.WORK" | translate
+      }}</a>
+    </li>
+    <li>
+      <a routerLink="/contact" (click)="sidebarVisible = false">{{
+        "NAVBAR.CONTACT" | translate
+      }}</a>
+    </li>
+  </ul>
+</p-sidebar>

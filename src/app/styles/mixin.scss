@@ -2,7 +2,8 @@ $smallScreen: 768px;
 $mediumScreen: 995px;
 $bigScreen: 1545px;
 
-:root{
+:root {
+  --navbar-color: #fff;
   --primary-color: #2d95ea;
   --secondary-color: #ff4081;
   --background-color: #f3efee;
@@ -11,4 +12,11 @@ $bigScreen: 1545px;
   --white: #f5f5f5;
   --background-color2: #fdf6e3;
   --background-about: #281e0f;
+}
+
+.dark-theme {
+  --navbar-color: #281e0f;
+  --background-color: #0a0909;
+  --backgroundFloat: #3a4955;
+  --text-color: #fdf6e3;
 }
