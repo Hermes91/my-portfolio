@@ -4,7 +4,6 @@ import { AboutComponent } from "../about/about.component";
 import { WorkComponent } from '../work/work.component';
 
 
-
 @Component({
   selector: 'app-home',
   imports: [TranslateModule, AboutComponent, WorkComponent],
@@ -12,7 +11,7 @@ import { WorkComponent } from '../work/work.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  imageSrc="../../../assets/cartridge-textless.png" ;
+  imageSrc="../../../assets/cartridge-textless.webp" ;
   isLoading=true;
 
   onImageLoad(){

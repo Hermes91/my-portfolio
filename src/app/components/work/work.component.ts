@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './work.component.scss',
 })
 export class WorkComponent {
-  imageSrc1 = '../../../assets/packageFinal1.png';
-  imageSrc2 = '../../../assets/packageFinal1.png';
-  imageSrc3 = '../../../assets/packageFinal1.png';
+  imageSrc1 = '../../../assets/packageFinal1.webp';
+  imageSrc2 = '../../../assets/packageFinal1.webp';
+  imageSrc3 = '../../../assets/packageFinal1.webp';
   isLoading = true;
 
   onImageLoad() {
