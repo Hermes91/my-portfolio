@@ -20,8 +20,8 @@ export class BackgroundFloatComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    const interval = 200;
-    const maxIcons = 30;
+    const interval = 100;
+    const maxIcons = 20;
     let created = 0;
 
 const iconGenerator = setInterval(() => {
@@ -34,6 +34,7 @@ const iconGenerator = setInterval(() => {
       const randomIcon = this.icons[Math.floor(Math.random() * this.icons.length)];
 
       this.renderer.setAttribute(img, 'src', randomIcon);
+      this.renderer.setAttribute(img, 'aria-hidden', 'true');
       this.renderer.addClass(img, 'float-icon');
 
       img.style.left = `${Math.random() * 100}vw`;

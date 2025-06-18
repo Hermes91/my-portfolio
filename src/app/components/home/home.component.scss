@@ -1,18 +1,41 @@
-.image-container {
+.image-container {  
   position: relative;
   display: block;
   margin-top: 5em;
   text-align: center;
 
+.image-wrapper{
+  
   img {
-    margin-left: auto;
-    margin-right: auto;
     max-width: 100%;
     height: auto;
     display: block;
-    font-style: italic;
-  }
+    transition: opacity 0.4s ease;
+    opacity: 0;
+        margin-left: auto;
+    margin-right: auto;
 
+    font-style: italic;
+    &.loaded {
+      opacity: 1;
+    }
+} }
+
+    &.small img {
+      width: 400px;
+      height: auto;
+    }
+
+    &.medium img {
+      width: 800px;
+      height: auto;
+    }
+
+    &.large img {
+      width: 1020px;
+      height: auto;
+    }
+    
   .hidden {
     display: none;
   }
@@ -165,7 +188,7 @@
 @media (max-width: 500px) {
     .home {
         &-text {
-            left: clamp(78%, 10vw, 50%) !important;
+            left: clamp(75%, 10vw, 50%) !important;
             top: 50% !important;
         }
         &-subtitle {
@@ -212,7 +235,7 @@
 }
 
 @media (max-width: 360px) {
-  .home {
+  .home { 
     &-text {
       left: clamp(80%, 10vw, 50%) !important;
       top: 60% !important;

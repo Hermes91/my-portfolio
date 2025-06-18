@@ -10,19 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './work.component.scss',
 })
 export class WorkComponent {
-  imageSrc1 = '../../../assets/packageFinal1.webp';
-  imageSrc2 = '../../../assets/packageFinal1.webp';
-  imageSrc3 = '../../../assets/packageFinal1.webp';
-  isLoading = true;
+  isLoaded = [false, false, false];
 
-  onImageLoad() {
-    this.isLoading = false;
-  }
-
-  onImageError() {
-    this.imageSrc1 = '../../../assets/packageFinal1low.gif';
-    this.imageSrc2 = '../../../assets/packageFinal2low.gif';
-    this.imageSrc3 = '../../../assets/packageFinal3low.gif';
-    this.isLoading = false;
+  onImageLoad(index:number) {
+    this.isLoaded[index] = false;
   }
 }

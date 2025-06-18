@@ -12,48 +12,46 @@
         <a routerLink="/work/logos" routerLinkActive="active">
           <img
             [src]="
-              isLoading
-                ? '../../../assets/packageFinal3low.gif'
+              isLoaded[0]
+                ? '../../../assets/packageFinal3_low.webp'
                 : '../../../assets/packageFinal3.webp'
             "
+            [class.loaded]="isLoaded[0]"
+            (load)="onImageLoad(0)"
             loading="lazy"
-            (load)="onImageLoad()"
-            (error)="onImageError()"
-            alt="Famicom package mock-up labeled 'Logos'"
+            alt="Logos"
           />
         </a>
       </div>
 
-      
       <div class="image-wrapper">
         <a routerLink="/work/illustrations" routerLinkActive="active">
           <img
             [src]="
-              isLoading
-                ? '../../../assets/packageFinal1low.gif'
-                : '../../../assets/packageFinal1.webp'
+              isLoaded[1]
+                ? '../../../assets/packageFinal2_low.webp'
+                : '../../../assets/packageFinal2.webp'
             "
+            [class.loaded]="isLoaded[1]"
+            (load)="onImageLoad(1)"
             loading="lazy"
-            (load)="onImageLoad()"
-            (error)="onImageError()"
-            alt="Famicom package mock-up labeled 'Illustrations'"
+            alt="Illustrations"
           />
         </a>
       </div>
-
 
       <div class="image-wrapper">
         <a routerLink="/work/branding" routerLinkActive="active">
           <img
             [src]="
-              isLoading
-                ? '../../../assets/packageFinal2low.gif'
-                : '../../../assets/packageFinal2.webp'
+              isLoaded[2]
+                ? '../../../assets/packageFinal1_low.webp'
+                : '../../../assets/packageFinal1.webp'
             "
+            [class.loaded]="isLoaded[2]"
+            (load)="onImageLoad(2)"
             loading="lazy"
-            (load)="onImageLoad()"
-            (error)="onImageError()"
-            alt="Famicom package mock-up labeled 'Branding'"
+            alt="Branding"
           />
         </a>
       </div>

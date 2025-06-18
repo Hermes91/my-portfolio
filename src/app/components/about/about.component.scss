@@ -1,7 +1,7 @@
 @use "../../styles/mixin.scss";
 
 .about-section {
-  background-image: url('../../../assets/galaxy2.gif');
+  background-image: url("../../../assets/galaxy2.webp");
   background-size: contain;
   background-repeat: repeat-x;
   background-color: var(--background-about);
@@ -19,7 +19,7 @@
   width: 100%;
   padding-top: 7em;
   padding-bottom: 7em;
-  
+
   .profilePic {
     border: 4pt solid var(--white);
     border-radius: 0.4em;
@@ -30,8 +30,22 @@
     overflow: hidden;
     box-shadow: 6px 6px 0px black;
 
-    img {
+    &.small img {
+      width: 200px;
+      height: auto;
+    }
+
+    &.medium img {
+      width: 250px;
+      height: auto;
+    }
+
+    &.large img {
       width: 300px;
+      height: auto;
+    }
+    
+    img {
       position: relative;
       display: block;
       z-index: 1;
@@ -50,7 +64,7 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background-image: url("../../../assets/profileG.gif");
+      background-image: url("../../../assets/profileG.webp");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 0 0;

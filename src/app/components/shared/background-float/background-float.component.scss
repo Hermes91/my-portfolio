@@ -1,3 +1,5 @@
+@use "../../../styles/mixin.scss";
+
 :host {
   position: fixed;
   width: 100vw;
@@ -22,4 +24,11 @@
   100% {
     transform: translateY(-210vh) translateX(-80vw) rotate(90deg);
   }
+}
+
+////////
+@media (max-width: mixin.$smallScreen) {
+ .float-icon{
+  display: none;
+ }
 }
