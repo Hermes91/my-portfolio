@@ -26,8 +26,8 @@
     padding: 0;
 
     li a {
-       list-style-type: none;
-    cursor: pointer;
+      list-style-type: none;
+      cursor: pointer;
       text-decoration: none;
       color: var(--text-color);
       font-weight: 500;
@@ -62,19 +62,27 @@
 
 ::ng-deep {
   .p-drawer {
-    background-color: var(--background-color);
-
     &-content {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      background-color: var(--drawer-color);
+      transition: background-color 0.3s ease-in-out;
+    }
+    &-header {
+      background-color: var(--drawer-color);
+      transition: background-color 0.3s ease-in-out;
+      display: flex;
+      justify-content: flex-end !important;
+    }
+
+    .p-button {
+      margin: 1em 1em 0 0;
+    }
+    .p-icon {
+      color: var(--text-color);
     }
   }
-  
-.p-sidebar {
-  background-color: var(--navbar-color);
-  color: var(--text-color)
-}
 
   .mobile-nav {
     padding: 2em;
@@ -119,16 +127,16 @@
   .mobile-menu {
     display: block;
     height: 100%;
-    background-color: var(--navbar-color)!important ;
+    background-color: var(--navbar-color) !important ;
   }
   .mobile-nav {
     li a {
       text-decoration: none;
-    color: var(--text-color);
-     &:active{
-      color: var(--primary-color);
-      font-weight: bold;
-    }
+      color: var(--text-color);
+      &:active {
+        color: var(--primary-color);
+        font-weight: bold;
+      }
     }
   }
 }

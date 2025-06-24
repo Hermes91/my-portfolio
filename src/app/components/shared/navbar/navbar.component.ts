@@ -10,10 +10,11 @@ import { SidebarModule } from 'primeng/sidebar';
 import { LanguageService } from '../../../services/language.service';
 import { RouterLink } from '@angular/router';
 import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { DrawerModule } from 'primeng/drawer';
 
 @Component({
   selector: 'app-navbar',
-  imports: [SidebarModule, TranslateModule, RouterLink, CommonModule],
+  imports: [SidebarModule, TranslateModule, RouterLink, CommonModule, DrawerModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })

@@ -53,7 +53,7 @@
 </header>
 
 <!-- Sidebar for Mobile Navigation -->
-<p-sidebar [(visible)]="sidebarVisible" position="full">
+<p-drawer [(visible)]="sidebarVisible" position="full" >
   <ul class="mobile-nav">
     <li>
       <a routerLink="/" (click)="sidebarVisible = false">{{
@@ -90,4 +90,4 @@
       </button>
     </li>
   </ul>
-</p-sidebar>
+</p-drawer>
