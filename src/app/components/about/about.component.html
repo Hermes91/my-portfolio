@@ -1,18 +1,38 @@
 <section class="about-section" id="about">
-    <div class="profilePic" [ngClass]="imageSize">
-        <img src="../../../assets/profile.webp" aria-hidden="true" >
-        <div class="glitch__layers">
-            <div class="glitch__layer"></div>
-            <div class="glitch__layer"></div>
-            <div class="glitch__layer"></div>
-        </div>
+  <div class="profilePic">
+    
+    @if(isLoading){
+    <div class="custom-spinner">
+      <p-progressSpinner
+        strokeWidth="6"
+        animationDuration="0.8s"
+        [style]="{ width: '60px', height: '60px', color: '#fff' }"
+      ></p-progressSpinner>
     </div>
-    <div class="about-text">
-        <div class="about-title">
-        <span>▶</span><h1>{{ 'ABOUT.TITLE' | translate }}</h1>
-        </div>
+    }
+
+    <img
+      src="https://ik.imagekit.io/07dp280wef/my-portfolio/profile.webp?updatedAt=1750353936247"
+      aria-hidden="true"
+      loading="lazy"
+      (load)="onImageLoad()"
+      [style.opacity]="isLoading ? 0 : 1"
+      style="transition: opacity 0.5s ease-in-out"
+    />
+
+    <div class="glitch__layers">
+      <div class="glitch__layer"></div>
+      <div class="glitch__layer"></div>
+      <div class="glitch__layer"></div>
+    </div>
+  </div>
+  <div class="about-text">
+    <div class="about-title">
+      <span>▶</span>
+      <h1>{{ "ABOUT.TITLE" | translate }}</h1>
+    </div>
     <div class="about-description">
-        <p>{{ 'ABOUT.DESCRIPTION' | translate }}<span>▮</span></p> 
+      <p>{{ "ABOUT.DESCRIPTION" | translate }}<span>▮</span></p>
     </div>
-    </div>
+  </div>
 </section>

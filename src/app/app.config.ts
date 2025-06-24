@@ -18,7 +18,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
   HttpClient,
-  HttpClientModule,
   provideHttpClient,
   withFetch,
 } from '@angular/common/http';
@@ -32,7 +31,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 export const appConfig: ApplicationConfig = {
   providers: [
     importProvidersFrom(
-      HttpClientModule,
+    
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,

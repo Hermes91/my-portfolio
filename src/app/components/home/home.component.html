@@ -1,4 +1,4 @@
-<div class="image-container" [ngClass]="imageSize">
+<div class="image-container">
   <div class="home-text">
     <div class="home-title">{{ "HOME.TITLE" | translate }}</div>
     <div class="home-subtitle">{{ "HOME.SUBTITLE" | translate }}</div>
@@ -8,18 +8,31 @@
     </div>
   </div>
 
-<div class="image-wrapper" >
-  <img
-    [src]="imageSrc"
-    width="720"
-    height="512"
-    decoding="async"
-    fetchpriority="high"
-    (load)="onImageLoad()"
-    (error)="onImageError()"
-    [class.loaded]="!isLoading"
-    aria-hidden="true"
-  />
+  <div class="image-wrapper">
+        @if(isLoading){
+    <div class="custom-spinner">
+      <p-progressSpinner
+        strokeWidth="6"
+        animationDuration="0.8s"
+        [style]="{ width: '60px', height: '60px', color: '#fff' }"
+      ></p-progressSpinner>
+    </div>
+    }
+    <img
+      [attr.srcset]="
+        'https://ik.imagekit.io/07dp280wef/my-portfolio/cartridge-textless.webp?tr=w-480 480w, https://ik.imagekit.io/07dp280wef/my-portfolio/cartridge-textless.webp?tr=w-768 768w, https://ik.imagekit.io/07dp280wef/my-portfolio/cartridge-textless.webp?tr=w-1024 1024w'
+      "
+      sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1024px"
+      decoding="async"
+      fetchpriority="high"
+      (error)="onImageError()"
+       (load)="onImageLoad()"
+      [style.opacity]="isLoading ? 0 : 1"
+      style="transition: opacity 0.5s ease-in-out"
+      [class.loaded]="!isLoading"
+      alt="Decorative artwork"
+      aria-hidden="true"
+    />
   </div>
 </div>
 <app-about ngSkipHydration></app-about>

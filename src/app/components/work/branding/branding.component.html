@@ -1,15 +1,23 @@
 <section class="brand-content">
-  <div
-    class="brand-image"
-    *ngFor="
-      let image of [
-        '../../../../assets/brand/1.webp',
-        '../../../../assets/brand/2.webp',
-        '../../../../assets/brand/3.webp',
-        '../../../../assets/brand/4.webp'
-      ]
-    "
-  >
-    <img [src]="'../../../../assets/brand/' + image" alt="Image from the catalog showing the branding process" />
+  @for ( image of imageUrls; track image; let i = $index){
+  <div class="brand-image">
+    @if(isLoading[i]){
+    <div class="custom-spinner">
+      <p-progressSpinner
+        strokeWidth="6"
+        animationDuration="0.8s"
+        [style]="{ width: '60px', height: '60px', color: '#fff' }"
+      ></p-progressSpinner>
+    </div>
+    }
+    <img
+      [src]="image"
+      alt="Image from the catalog showing the branding process"
+      loading="lazy"
+      (load)="onImageLoad(i)"
+      [style.opacity]="isLoading[i] ? 0 : 1"
+      style="transition: opacity 0.5s ease-in-out"
+    />
   </div>
+  }
 </section>

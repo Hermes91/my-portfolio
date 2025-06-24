@@ -8,53 +8,30 @@
     </div>
 
     <nav class="work-nav">
-      <div class="image-wrapper">
-        <a routerLink="/work/logos" routerLinkActive="active">
-          <img
-            [src]="
-              isLoaded[0]
-                ? '../../../assets/packageFinal3_low.webp'
-                : '../../../assets/packageFinal3.webp'
-            "
-            [class.loaded]="isLoaded[0]"
-            (load)="onImageLoad(0)"
-            loading="lazy"
-            alt="Logos"
-          />
-        </a>
-      </div>
+      @for ( item of items; track item; let i = $index){
+      <div class="image-wrapper" style="position: relative">
+        @if(isLoading[i]){
+        <div class="custom-spinner">
+          <p-progressSpinner
+            strokeWidth="6"
+            animationDuration="0.8s"
+            [style]="{ width: '60px', height: '60px', color: '#fff' }"
+          ></p-progressSpinner>
+        </div>
+        }
 
-      <div class="image-wrapper">
-        <a routerLink="/work/illustrations" routerLinkActive="active">
+        <a [routerLink]="item.link" routerLinkActive="active">
           <img
-            [src]="
-              isLoaded[1]
-                ? '../../../assets/packageFinal2_low.webp'
-                : '../../../assets/packageFinal2.webp'
-            "
-            [class.loaded]="isLoaded[1]"
-            (load)="onImageLoad(1)"
+            [src]="item.src"
             loading="lazy"
-            alt="Illustrations"
+            [alt]="item.alt"
+            (load)="onImageLoad(i)"
+            [style.opacity]="isLoading[i] ? 0 : 1"
+            style="transition: opacity 0.5s ease-in-out"
           />
         </a>
       </div>
-
-      <div class="image-wrapper">
-        <a routerLink="/work/branding" routerLinkActive="active">
-          <img
-            [src]="
-              isLoaded[2]
-                ? '../../../assets/packageFinal1_low.webp'
-                : '../../../assets/packageFinal1.webp'
-            "
-            [class.loaded]="isLoaded[2]"
-            (load)="onImageLoad(2)"
-            loading="lazy"
-            alt="Branding"
-          />
-        </a>
-      </div>
+      }
     </nav>
   </div>
 </section>

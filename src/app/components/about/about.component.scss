@@ -1,7 +1,7 @@
 @use "../../styles/mixin.scss";
 
 .about-section {
-  background-image: url("../../../assets/galaxy2.webp");
+  background-image: url("https://ik.imagekit.io/07dp280wef/my-portfolio/galaxy2.webp?updatedAt=1750353934912");
   background-size: contain;
   background-repeat: repeat-x;
   background-color: var(--background-about);
@@ -30,22 +30,10 @@
     overflow: hidden;
     box-shadow: 6px 6px 0px black;
 
-    &.small img {
-      width: 200px;
-      height: auto;
-    }
-
-    &.medium img {
-      width: 250px;
-      height: auto;
-    }
-
-    &.large img {
-      width: 300px;
-      height: auto;
-    }
     
     img {
+            width: 300px;
+      height: auto;
       position: relative;
       display: block;
       z-index: 1;
@@ -64,7 +52,7 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background-image: url("../../../assets/profileG.webp");
+      background-image: url("https://ik.imagekit.io/07dp280wef/my-portfolio/profileG.webp?updatedAt=1750353936148");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 0 0;

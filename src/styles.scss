@@ -36,3 +36,14 @@ p {
   line-height: 28pt;
   margin: 0 auto;
 }
+
+.custom-spinner {
+     position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            stroke: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
