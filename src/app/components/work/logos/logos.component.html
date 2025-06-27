@@ -2,7 +2,7 @@
  <section class="logo-grid">
     <div class="grid">
       <ng-container *ngFor="let logo of logos">
-      <img *ngIf="logo; else emptySlot" [src]="logo" alt="Logo sample" />
+      <img *ngIf="logo; else emptySlot" [src]="logo" alt="Logo sample" width="469" height="309"/>
       <ng-template #emptySlot>
         <div class="empty-slot"></div>
       </ng-template>

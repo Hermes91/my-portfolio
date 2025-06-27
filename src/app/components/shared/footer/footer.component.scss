@@ -35,23 +35,14 @@
       font-family: "Silkscreen", sans-serif;
 
       &:hover {
-        color: var(--white);
+        color: var(--background-color);
       }
     }
-  }
 
-  .footer-socials {
-    display: flex;
-    gap: 1rem;
-
-    i {
-      font-size: 1.2rem;
-      color: var(--white);
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: var(--white);
-      }
+    span {
+      font-size: 1em;
+      font-weight: bold;
+      color: black;
     }
   }
 }
@@ -72,4 +63,25 @@
   background-size: auto;
   transform: translateY(-100%);
   z-index: 20;
+}
+
+.go-top-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--drawer-color);
+  font-size: 2rem;
+  transition: transform 0.2s ease;
+  position: absolute;
+  float: right;
+  right: 2em;
+  bottom: 2em;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  i.pi {
+    vertical-align: middle;
+  }
 }

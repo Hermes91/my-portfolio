@@ -1,6 +1,5 @@
 <section class="about-section" id="about">
   <div class="profilePic">
-    
     @if(isLoading){
     <div class="custom-spinner">
       <p-progressSpinner
@@ -12,7 +11,14 @@
     }
 
     <img
-      src="https://ik.imagekit.io/07dp280wef/my-portfolio/profile.webp?updatedAt=1750353936247"
+      src="https://ik.imagekit.io/07dp280wef/my-portfolio/profile.webp?updatedAt=1751031974616"
+      srcset="
+      https://ik.imagekit.io/07dp280wef/my-portfolio/small/profile-small.webp?updatedAt=1751032038442  480w
+      https://ik.imagekit.io/07dp280wef/my-portfolio/profile.webp?updatedAt=1751031974616             746w,
+      "
+      sizes="(max-width: 480px) 480px, (max-width: 746px) 746px, 1024px"
+      width="768"
+      height="1024"
       aria-hidden="true"
       loading="lazy"
       (load)="onImageLoad()"

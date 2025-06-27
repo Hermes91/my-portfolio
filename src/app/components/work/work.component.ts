@@ -4,10 +4,15 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
-
 @Component({
   selector: 'app-work',
-  imports: [TranslateModule, RouterLink, RouterLinkActive, CommonModule, ProgressSpinnerModule],
+  imports: [
+    TranslateModule,
+    RouterLink,
+    RouterLinkActive,
+    CommonModule,
+    ProgressSpinnerModule,
+  ],
   templateUrl: './work.component.html',
   styleUrl: './work.component.scss',
 })
@@ -18,17 +23,17 @@ export class WorkComponent {
     {
       link: '/work/logos',
       alt: 'Logos',
-      src: 'https://ik.imagekit.io/07dp280wef/my-portfolio/packageFinal3.webp?updatedAt=1750353934709',
+      src: 'https://ik.imagekit.io/07dp280wef/my-portfolio/packageFinal3.webp?updatedAt=1751037462536',
     },
     {
       link: '/work/illustrations',
       alt: 'Illustrations',
-      src: 'https://ik.imagekit.io/07dp280wef/my-portfolio/packageFinal1.webp?updatedAt=1750353935309',
+      src: 'https://ik.imagekit.io/07dp280wef/my-portfolio/packageFinal1.webp?updatedAt=1751037440913',
     },
     {
       link: '/work/branding',
       alt: 'Branding',
-      src: 'https://ik.imagekit.io/07dp280wef/my-portfolio/packageFinal2.webp?updatedAt=1750353935464',
+      src: 'https://ik.imagekit.io/07dp280wef/my-portfolio/packageFinal2.webp?updatedAt=1751037326071',
     },
   ];
 
